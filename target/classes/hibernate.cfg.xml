@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+  <!-- Datos de conexión a la BD -->
+  <property name="connection.driver_class">org.hsqldb.jdbcDriver</property>
+  <!-- 	   <property name="connection.driver_class">org.postgresql.Driver</property> -->  
+         
+       
+  <!-- hsqldb: manejador de BD // hsql: nombre BD // localhost: dirección del servidor BD-->
+  <property name="connection.url">jdbc:hsqldb:hsql://localhost</property> 
+  <!-- <property name="connection.url">jdbc:postgresql://5.6.0.13:5432/AcademiaJava</property> -->
+  <property name="connection.username">sa</property>
+  <property name="connection.password"></property> 
+  
+  <!-- JDBC connection pool (usa la integrada en Hibernate) -->
+  <property name="connection.pool_size">1</property>
+  
+  <!-- Dialecto de SQL -->
+  <property name="dialect">org.hibernate.dialect.HSQLDialect</property>
+  <!-- <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property> -->
+  
+  <!-- Automatic session context managment -->
+  <property name="current_session_context_class">thread</property>
+  
+  <!-- Deshabilita cache de segundo nivel -->
+  <property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+  
+  <!-- Imprime en salida estandar las sentencias SQL efectuadas por Hibernate -->
+  <property name="show_sql">true</property>
+  
+  <!-- Elimina y crea nuevamente el esquema cada que inicia la aplicación -->
+  <property name="hbm2ddl.auto">create</property>
+  
+  <!-- Mapeos -->
+  <mapping resource="mx/com/sintelti/domain/ProductosEntity.hbm.xml"/>
+ </session-factory>
+</hibernate-configuration>

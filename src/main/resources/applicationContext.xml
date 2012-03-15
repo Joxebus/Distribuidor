@@ -2,18 +2,13 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-
-	<bean id="productosEntity" class="mx.com.sintelti.domain.ProductosEntity" />
-	<bean id="productosColeccionesDAO" class="mx.com.sintelti.dao.ProductosColeccionesDAO">
-	 	<property name="listaProductos" ref="arrayList"></property>
-	 </bean>
-	 <bean id="productosCatalog" class="mx.com.sintelti.main.ProductosCatalog">
-	 	<property name="operaciones" ref="productosBDDAO"></property>
-	 	<property name="nuevoProducto" ref="productosEntity"></property>
-	 </bean>
-	 
-	 <bean id="productosBDDAO" class="mx.com.sintelti.dao.ProductosBDDAO"/>
-
-	<bean id="arrayList" class="java.util.ArrayList"/>
-
+	
+	<bean name="producto" class="mx.com.sintelti.domain.ProductosEntity" scope="prototype"/>
+	
+	<bean name="venta" class="mx.com.sintelti.domain.VentaEntity" scope="prototype">
+		<property name="productos" ref="listaProductos"></property>
+	</bean>
+	
+	<bean name="listaProductos" class="java.util.HashSet" scope="prototype"/>
+	
 </beans>

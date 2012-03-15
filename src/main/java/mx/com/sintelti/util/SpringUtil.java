@@ -12,11 +12,11 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class SpringUtil {
 	
-private static final ApplicationContext CONTEXT = buildSpringContext(); 
+	private static final ApplicationContext CONTEXT = buildSpringContext(); 
 	
 	private static ClassPathXmlApplicationContext buildSpringContext(){		
 			try{
-				return new ClassPathXmlApplicationContext("/ApplicationContext.xml");
+				return new ClassPathXmlApplicationContext("/applicationContext.xml");
 			}catch(BeansException ace){
 				throw new ExceptionInInitializerError(ace);
 			}			

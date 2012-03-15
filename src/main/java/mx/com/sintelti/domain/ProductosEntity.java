@@ -6,12 +6,16 @@ package mx.com.sintelti.domain;
  * e-mail	joxebus@hotmail.com
  */
 
-public class ProductosEntity {
+public class ProductosEntity implements Persistible{
 
 	private long id;
 	private String nombre;
 	private float precio;
-	private int existencia;
+	private int existencia;	
+	
+	public ProductosEntity() {
+		
+	}
 	
 	@Override
 	public String toString() {

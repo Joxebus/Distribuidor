@@ -8,7 +8,7 @@ package mx.com.sintelti.domain;
 
 public class ProductosEntity {
 
-	private int id;
+	private long id;
 	private String nombre;
 	private float precio;
 	private int existencia;
@@ -54,10 +54,10 @@ public class ProductosEntity {
 	public void setExistencia(int existencia) {
 		this.existencia = existencia;
 	}
-	public int getId() {
+	public long getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(long id) {
 		this.id = id;
 	}	
 	

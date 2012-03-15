@@ -10,7 +10,7 @@ import java.util.List;
 
 import mx.com.sintelti.domain.ProductosEntity;
 
-public class ProductosColeccionesDAO implements OperacionesCrud {
+public class ProductosColeccionesDAO {
 
 	private List<ProductosEntity> listaProductos;
 	

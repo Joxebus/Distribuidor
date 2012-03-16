@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 16/03/2012 10:17:22 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="mx.com.sintelti.domain.VentaEntity" table="VENTAS">
+        <id name="id" type="long">
+            <column name="ID_VENTA" />
+            <generator class="native" />
+        </id>
+        <property name="subTotal" type="double">
+            <column name="SUBTOTAL" />
+        </property>
+        <property name="totalVenta" type="double">
+            <column name="TOTAL_VENTA" />
+        </property>
+        <set name="productos" table="PRODUCTOS_VENDIDOS" inverse="false" lazy="true">
+            <key>
+                <column name="ID_VENTA" />
+            </key>
+            <one-to-many class="mx.com.sintelti.domain.ProductosEntity" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -13,6 +13,10 @@ public class VentaEntity implements Persistible{
 		
 	}
 	
+	public void agregarProducto(ProductosEntity producto){
+		productos.add(producto);
+	}
+	
 	public long getId() {
 		return id;
 	}

@@ -35,6 +35,10 @@ public class Almacen {
 		return crudProductos.read(producto);		
 	}
 	
+	public void actualizarProducto(ProductosEntity producto){
+		crudProductos.update(producto);
+	}
+	
 	public void actualizarProducto(long id){
 		producto = context.getBean("producto",ProductosEntity.class);
 		producto.setId(id);
@@ -44,6 +48,13 @@ public class Almacen {
 		System.out.println("::::::::::::::::::::::::");
 		leerDatosProducto();
 		crudProductos.update(producto);
+	}
+	
+	public void productosExistentes(){
+		for(ProductosEntity producto : crudProductos.list(new ProductosEntity())){
+			System.out.println(producto);
+		}
+		
 	}
 	
 	private void leerDatosProducto(){

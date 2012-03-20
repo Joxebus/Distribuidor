@@ -1,14 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
-<hibernate-mapping package="mx.com.sintelti.domain">
-	<class name="ProductosEntity" table="PRODUCTOS">
-		<id name="id">
-			<generator class="native"/>
-		</id>
-		<property name="nombre"/>
-		<property name="precio"/>
-		<property name="existencia"/>		
-	</class> 
-	
-	
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 16/03/2012 10:17:22 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="mx.com.sintelti.domain.ProductosEntity" table="PRODUCTOSENTITY">
+        <id name="id" type="long">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="nombre" type="java.lang.String">
+            <column name="NOMBRE" />
+        </property>
+        <property name="precio" type="float">
+            <column name="PRECIO" />
+        </property>
+        <property name="existencia" type="int">
+            <column name="EXISTENCIA" />
+        </property>
+    </class>
 </hibernate-mapping>

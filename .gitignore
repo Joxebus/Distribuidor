@@ -15,9 +15,9 @@
 *.log
 
 # Archivos de Eclipse #
-.classpath
-.project
-.settings
+# .classpath
+# .project
+# .settings
 
 # Archivos de IntelliJ IDEA #
 *.iml
